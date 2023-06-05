@@ -1,0 +1,115 @@
+* { margin: 0;}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+header {
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: rgb(53, 53, 53);
+}
+
+.navbar_logo > a > img {
+    width: 150px;
+    margin-left: 10px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    padding: 8px 12px;
+}
+
+li {
+    list-style: none;
+}
+
+.main_menu li {
+    float: left;
+    padding: 0 20px;
+    height: 36px;
+    line-height: 36px;
+    position: relative;
+}
+
+.sub_menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+}
+
+.sub_menu li {
+    width: 100px;
+    border: 1px solid rgb(162, 162, 162);
+    background-color: rgb(255, 255, 255);
+}
+
+.main_menu li:hover .sub_menu {
+    display: block;
+    
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+}
+
+#s1 {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.categorize > ul > li {
+    float: left;
+    margin-left: 10px;
+}
+
+.categorize {
+    font-size: 16pt;
+    text-align: center;/*중앙정렬*/
+    background: #cb91f4;
+    padding: 20px 0 20px 0;
+    height: 30px;
+    width: 1519px;
+ }
+ .categorize li {
+   display: inline-block;/*여백 없이 좌측으로 붙은 li*/
+   padding: 0 40px 0 0;
+ }
+ .categorize a{
+    color: #fff;/*폰트컬러*/
+    font-size: 16px;
+    font-weight: bolder;/*폰트굵기*/
+    text-decoration: none;/*a href 밑줄 등 글자 꾸밈 없음*/
+    line-height: 30px;
+ }
+ .categorize a:after {/*after 가상요소*/
+    display:block;/*a요소를 블록 요소라고 선언*/
+    width:70px;/*카테고리 메뉴 밑줄의 크기를 동일하게 주기 위해 width 설정*/
+               /*혹시 a요소 크기만큼 생기길 바란다면 width 삭제*/
+    content: '';/*comtent안은 밑줄 디자인을 위해 비워두세요.*/
+    border-bottom: solid 2px #fff;
+    transform: scaleX(0);/*크기를 0으로 줌으로써 평상시엔 밑줄 없음*/
+    transition: transform 250ms ease-in-out; /*변형 방식*/
+ }
+ .categorize a:hover:after {
+    transform: scaleX(1);/*a 속성에 hover시 after를 기존 크기로 변경*/
+ }
+
+ .group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 250px;
+ }

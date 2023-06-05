@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <link rel="icon" href="/img/gettoo.ico">
+    <link rel="stylesheet" href="/login_index.css">
+    <title>GET-TOO</title>
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <div class="navbar_logo">
+            <a href="index.html"><img src="/img/nav_logo.png"/></a>
+        </div>
+        <div class="navbar_menu">
+            <ul class="main_menu">
+                <li><a href="####">안녕하세요, <span style="font-weight: bold;"th:text="${name}"></span>님 ∨
+                    <ul class="sub_menu">
+                        <li><a href="loginClient/ShowMypage">프로필</a></li>
+                        <li><a href="login_group.html">동아리</a></li>
+                        <li> <form action="/clientlogout" method="post">
+                            <button type="submit">
+                                로그아웃
+                            </button>
+                        </form>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        </div>
+    </nav>
+</header>
+
+<section id="s1">
+    <div>
+        <div class="categorize">
+            <ul>
+                <li><a href="####">전체</a></li>
+                <li><a href="####">체육분과</a></li>
+                <li><a href="####">문화분과</a></li>
+                <li><a href="####">봉사분과</a></li>
+                <li><a href="####">교양분과</a></li>
+                <li><a href="####">종교분과</a></li>
+            </ul>
+        </div>
+
+        <div class="group">
+            <h5>아직 등록된 동아리가 없습니다.</h5>
+        </div>
+    </div>
+</section>
+</body>
+</html>
